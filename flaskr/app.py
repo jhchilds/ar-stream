@@ -1,6 +1,7 @@
 import os
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
+
 # from flask_socketio import SocketIO
 
 
@@ -11,10 +12,11 @@ app.config.from_mapping(
 )
 # socketio = SocketIO(app)
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def index():
-    return render_template('index.html')
-
+    print(request.form)
+    # return render_template('index.html')
+    return "Request Handled"
 
 # @socketio.on('message')
 # def handle_message(msg):
