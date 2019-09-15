@@ -12,7 +12,7 @@ app.config.from_mapping(
 )
 # socketio = SocketIO(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def index():
     print(request.form)
     return render_template('index.html')
