@@ -8,6 +8,12 @@
 {% block content %}
 
 
-TEST
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://127.0.0.1:5000');
+    socket.on('connect', function() {
+        socket.send('User has connected!');
+    });
+</script>
 
 {% endblock %}
