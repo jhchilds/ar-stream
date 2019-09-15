@@ -2,7 +2,6 @@ import os
 from flask import Flask
 from flask import render_template
 from flask_socketio import SocketIO
-import threading
 
 
 
@@ -23,10 +22,8 @@ def handle_message(msg):
 
 # flask-socketio can not use Flask Run command, simply run with python NOT Flask Run.
 
-def start_socket():
-    socketio.run(app)
+socketio.run(app)
 
-socket_thread = threading.Thread(target=start_socket())
-socket_thread.start()
+
 
 
