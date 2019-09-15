@@ -12,11 +12,11 @@ app.config.from_mapping(
 )
 # socketio = SocketIO(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/', method=['POST'])
 def index():
     print(request.form)
-    # return render_template('index.html')
-    return "Request Handled"
+    return render_template('index.html')
+
 
 # @socketio.on('message')
 # def handle_message(msg):
