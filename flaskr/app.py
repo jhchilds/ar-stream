@@ -14,9 +14,13 @@ app.config.from_mapping(
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    print(request.form)
-    return render_template('index.html')
-
+    
+    if request.method == 'POST':
+        x = request.form['x']
+    else:
+        x = '0'    
+    return x
+        
 
 # @socketio.on('message')
 # def handle_message(msg):
