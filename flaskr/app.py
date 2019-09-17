@@ -1,34 +1,35 @@
 import os
+import json
 from flask import Flask, request
 from flask import render_template
+from threading import Thread,Event
+from time import sleep
+from random import random
 
-# from flask_socketio import SocketIO
 
 
+from flask_socketio import SocketIO
+from flask_socketio import send, emit
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
     SECRET_KEY='dev',
 )
-# socketio = SocketIO(app)
+
+socketio = SocketIO(app)
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    
-    if request.method == 'POST':
-        x = request.form['x']
-    else:
-        x = '0'    
-    return x
-        
 
-# @socketio.on('message')
-# def handle_message(msg):
-#     print('received message: ' + msg)
+    return render_template('index.html')
 
-# flask-socketio can not use Flask Run command, simply run with python NOT Flask Run.
+@app.route('/stream', methods=['POST'])
+def test():
 
-# socketio.run(app)
+    socketio.emit('this', json.dumps(request.form))
+    return 'ok'
+
+socketio.run(app, host="0.0.0.0", port=1142, log_output=True)
 
 
 
