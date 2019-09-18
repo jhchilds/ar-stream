@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask import render_template
 from threading import Thread,Event
 from time import sleep
@@ -20,13 +20,11 @@ socketio = SocketIO(app)
 
 @app.route('/', methods=['GET','POST'])
 def index():
-
     return render_template('index.html')
 
 @app.route('/stream', methods=['POST'])
-def test():
-
-    socketio.emit('this', json.dumps(request.form))
+def stream():
+    socketio.emit('data', request.form)
     return 'ok'
 
 socketio.run(app, host="0.0.0.0", port=1142, log_output=True)
