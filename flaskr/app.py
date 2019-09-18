@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, url_for
 from flask import render_template
 from threading import Thread,Event
 from time import sleep
@@ -16,11 +16,17 @@ app.config.from_mapping(
     SECRET_KEY='dev',
 )
 
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins='*')
+
+
 
 @app.route('/', methods=['GET','POST'])
 def index():
     return render_template('index.html')
+
+@app.route('/live-position', methods=['GET','POST'])
+def live_position():
+    return render_template('live-pos.html')
 
 @app.route('/stream', methods=['POST'])
 def stream():
