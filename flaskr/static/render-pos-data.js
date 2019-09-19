@@ -32,19 +32,28 @@ var data = [
                 z: 1,
             },
             xaxis: {
+                title: {
+                    text: 'x (m)'
+                },
                 nticks: 9,
                 range: [-1, 1],
             },
             yaxis: {
+                title: {
+                    text: 'y (m)'
+                },
                 nticks: 7,
                 range: [-1, 1],
             },
             zaxis: {
+                title: {
+                    text: 'z (m)'
+                },
                 nticks: 10,
                 range: [-1, 1],
             }
         },
-        autosize: false,
+        autosize: true,
         width: 1000,
         height: 1000,
         datarevision: count,
@@ -77,8 +86,8 @@ socket.on('data', function (msg) {
                 color: "green"
             },
             x: x_array,
-            y: y_array,
-            z: z_array
+            y: z_array,
+            z: y_array
         }
     ];
 
@@ -91,19 +100,28 @@ socket.on('data', function (msg) {
                 z: 1,
             },
             xaxis: {
+                title: {
+                    text: 'x (m)'
+                },
                 nticks: 9,
                 range: [-1, 1],
             },
             yaxis: {
+                title: {
+                    text: 'y (m)'
+                },
                 nticks: 7,
                 range: [-1, 1],
             },
             zaxis: {
+                title: {
+                    text: 'z (m)'
+                },
                 nticks: 10,
                 range: [-1, 1],
             }
         },
-        autosize: false,
+        autosize: true,
         width: 1000,
         height: 1000,
         datarevision: count,
