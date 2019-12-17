@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask import render_template
 from flask_socketio import SocketIO
-
+import csv, datetime
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
@@ -9,6 +9,13 @@ app.config.from_mapping(
 )
 
 socketio = SocketIO(app, cors_allowed_origins='*')
+
+
+# Create new CSV when server is started
+data_filename = 'data/pose_data_' + str(datetime.datetime.now()) +'.csv'
+with open(data_filename, mode='w') as data_file:
+    csv_writer = csv.writer(data_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    csv_writer.writerow(['pose_x', 'pose_y', 'pose_z'])
 
 
 
@@ -28,6 +35,9 @@ def stream():
     pose_y = request.form["y"]
     pose_z = request.form["z"]
 
+    with open(data_filename, mode='a') as data_file:
+        csv_writer = csv.writer(data_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        csv_writer.writerow([pose_x, pose_y, pose_z])
 
 
     return 'ok'
