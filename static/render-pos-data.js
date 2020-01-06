@@ -60,7 +60,7 @@ var data = [
         },
     };
 Plotly.newPlot(document.getElementById('position'), data, layout, {showSendToCloud: false});
-var socket = io.connect('http://10.245.193.205:1142')
+var socket = io.connect('http://192.168.0.165:1142')
 socket.on('data', function (msg) {
 
     count += 1;
