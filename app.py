@@ -34,7 +34,6 @@ def stream():
     pose_x = request.form["x"]
     pose_y = request.form["y"]
     pose_z = request.form["z"]
-
     with open(data_filename, mode='a') as data_file:
         csv_writer = csv.writer(data_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow([pose_x, pose_y, pose_z])
