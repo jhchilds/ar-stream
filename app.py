@@ -6,7 +6,7 @@ app.config.from_mapping(
     SECRET_KEY='dev',
 )
 
-db = Database(0, 0, 0)
+db = Database(0, 0, 0, 0, 0)
 data_filename = db.create_database()
 
 socketio = SocketIO(app, cors_allowed_origins='*')
@@ -24,7 +24,11 @@ def stream():
     pose_x = request.form["x"]
     pose_y = request.form["y"]
     pose_z = request.form["z"]
+    latitude = request.form["lat"]
+    longitude = request.form["lon"]
+
     db.set_pose(pose_x, pose_y, pose_z)
+    db.set_lat_long(latitude, longitude)
     db.write_data(data_filename)
 
     socketio.emit('data', request.form) #This is for live updating to client with websocket
