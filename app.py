@@ -24,7 +24,6 @@ def stream():
     pose_x = request.form["x"]
     pose_y = request.form["y"]
     pose_z = request.form["z"]
-
     db.set_pose(pose_x, pose_y, pose_z)
     db.write_data(data_filename)
 

@@ -22,7 +22,6 @@ class Database:
         self.pose_z = z
 
 
-
     def get_pose_x(self, x):
         return x
 
