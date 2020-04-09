@@ -18,3 +18,5 @@ build/
 *.csv
 
 templates/map.html
+
+images/
