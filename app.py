@@ -15,6 +15,10 @@ socketio = SocketIO(app, cors_allowed_origins='*')
 def index():
     return render_template('index.html')
 
+@app.route('/map', methods=['GET','POST'])
+def map():
+    return render_template('map.html')
+
 @app.route('/live-position', methods=['GET','POST'])
 def live_position():
     return render_template('live-pos.html')

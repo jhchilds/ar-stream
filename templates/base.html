@@ -6,7 +6,7 @@
     <meta name="description" content="Web application for streaming data from an ARCore augmented reality application.">
     <meta name="author" content="Josh Childs">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../static/style.css"/>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
     <title>AR Stream | {% block title %}{% endblock %}</title>
     {% endblock %}
@@ -26,6 +26,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link " href={{url_for('live_position')}}>Live Local Position<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link " href={{url_for('map')}}>Map<span class="sr-only">(current)</span></a>
+
             </div>
         </div>
     </nav>
