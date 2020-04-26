@@ -15,6 +15,10 @@ socketio = SocketIO(app, cors_allowed_origins='*')
 def index():
     return render_template('index.html')
 
+@app.route('/arcgis-dss', methods=['GET','POST'])
+def arcgis():
+    return render_template('arcgis-dss.html')
+
 @app.route('/map', methods=['GET','POST'])
 def map():
     return render_template('map.html')
