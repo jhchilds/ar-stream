@@ -1,5 +1,5 @@
 var map;
-var myLatLng = {lat: 44.479956, lng: -73.197781};
+var myLatLng = {lat: 44.479956, lng: -73.197765};
 function initMap() {
 map = new google.maps.Map(document.getElementById('map'), {
   center: myLatLng,
@@ -36,8 +36,8 @@ marker.addListener('click', function() {
 
 
 var gprPathCoordinates = [
-    {lat: 44.479999, lng: -73.197781},
-    {lat: 44.479956, lng: -73.197781}
+    {lat: 44.479999, lng: -73.197765},
+    {lat: 44.479956, lng: -73.197765}
   ];
   var gprPath = new google.maps.Polyline({
     path: gprPathCoordinates,
