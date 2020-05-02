@@ -12,7 +12,7 @@
     {
       "type": "Feature",
       "properties": {
-        "mag": 5.0,
+        "mag": 4.0,
         "place": "Votey Parking Lot, UVM",
         "time": 1585848530780,
         "updated": 1585929417150,
@@ -23,8 +23,302 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.197765,
+          -73.198595,
           44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 2,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198585,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 3,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198575,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 4,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198565,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 5,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198555,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 6,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198545,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 7,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198535,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 8,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198525,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 9,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198515,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198505,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198405,
+          44.479966,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198405,
+          44.479976,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198405,
+          44.479986,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198505,
+          44.479976,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150,
+        "id": 10,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.198705,
+          44.479976,
           5.0
         ]
       },
