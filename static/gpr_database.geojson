@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1588440457000,
+    "url": "undefined",
+    "title": "Demo GPR Database",
+    "status": 200,
+    "api": "1.8.1",
+    "count": 1
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.0,
+        "place": "Votey Parking Lot, UVM",
+        "time": 1585848530780,
+        "updated": 1585929417150,
+        "updated": 1585929417150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.197765,
+          44.479956,
+          5.0
+        ]
+      },
+      "id": "av70882789"
+    }
+  ],
+  "bbox": [
+    -179.9913,
+    -60.9669,
+    -3.5,
+    179.9971,
+    81.3019,
+    649.71
+  ]
+}

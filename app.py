@@ -47,4 +47,4 @@ def stream():
 
 
 
-socketio.run(app, host="0.0.0.0", port=1142, log_output=True)
+socketio.run(app, host="0.0.0.0", port=8888, log_output=True)

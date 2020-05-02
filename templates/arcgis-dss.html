@@ -1,93 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS DSS</title>
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>GeoJSONLayer - 4.15</title>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.15/"></script>
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 
-  <script>
-    require([
-      "esri/Map",
-      "esri/views/MapView",
-      "esri/Graphic",
-      "esri/layers/GraphicsLayer"
-    ], function(Map, MapView, Graphic, GraphicsLayer) {
+    <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.15/"></script>
 
-      var map = new Map({
-        basemap: "topo-vector"
-      });
+    <script>
+        require([
+            "esri/Map",
+            "esri/layers/GeoJSONLayer",
+            "esri/views/MapView"
+        ], function (Map, GeoJSONLayer, MapView) {
+            // If GeoJSON files are not on the same domain as your website, a CORS enabled server
+            // or a proxy is required.
+            const url =
+                "http://0.0.0.0:8888/static/gpr_database.geojson";
 
-      var view = new MapView({
-        container: "viewDiv",
-        map: map,
-        center: [-73.197765, 44.479956],
-        zoom: 13
-      });
+            // Paste the url into a browser's address bar to download and view the attributes
+            // in the GeoJSON file. These attributes include:
+            // * mag - magnitude
+            // * type - earthquake or other event such as nuclear test
+            // * place - location of the event
+            // * time - the time of the event
+            // Use the Arcade Date() function to format time field into a human-readable format
 
-
-       var graphicsLayer = new GraphicsLayer();
-       map.add(graphicsLayer);
-
-
-       var point = {
-         type: "point",
-         longitude: -73.197765 ,
-         latitude: 44.479956
-       };
-
-       var simpleMarkerSymbol = {
-         type: "simple-marker",
-         color: [226, 119, 40],  // orange
-         outline: {
-           color: [255, 255, 255], // white
-           width: 1
-         }
-       };
-
-       var pointGraphic = new Graphic({
-         geometry: point,
-         symbol: simpleMarkerSymbol
-       });
-
-       graphicsLayer.add(pointGraphic);
+            const template = {
+              title: "Point Info",
+              content: "GPR Scan in {place} on {time}",
+              fieldInfos: [
+                {
+                  fieldName: "time",
+                  format: {
+                    dateFormat: "short-date-short-time"
+                  }
+                }
+              ]
+            };
 
 
-       var simpleLineSymbol = {
-         type: "simple-line",
-         color: [226, 119, 40], // orange
-         width: 2
-       };
+            const renderer = {
+                type: "simple",
+                field: "mag",
+                symbol: {
+                    type: "simple-marker",
+                    color: "green",
+                    outline: {
+                        color: "black"
+                    }
+                },
+                visualVariables: [
+                    {
+                        type: "size",
+                        field: "mag",
+                        stops: [
+                            {
+                                value: 2.5,
+                                size: "4px"
+                            },
+                            {
+                                value: 8,
+                                size: "40px"
+                            }
+                        ]
+                    }
+                ]
+            };
 
-       var polyline = {
-         type: "polyline",
-         paths: [
-           [-73.197765, 44.479956],
-           [-73.197765, 44.489956],
-           [-73.197765, 44.499956]
-         ]
-       };
+            const geojsonLayer = new GeoJSONLayer({
+                url: url,
+                copyright: "USGS Earthquakes",
+                popupTemplate: template,
+                renderer: renderer //optional
+            });
 
-       var polylineGraphic = new Graphic({
-         geometry: polyline,
-         symbol: simpleLineSymbol
-       });
+            const map = new Map({
+                basemap: "hybrid",
+                layers: [geojsonLayer]
+            });
 
-       graphicsLayer.add(polylineGraphic);
-
-    });
-  </script>
+            const view = new MapView({
+                container: "viewDiv",
+                center: [-73.197765, 44.479956],
+                zoom: 20,
+                map: map
+            });
+        });
+    </script>
 </head>
+
 <body>
-  <div id="viewDiv"></div>
+<div id="viewDiv"></div>
 </body>
 </html>
