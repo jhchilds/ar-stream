@@ -44,18 +44,50 @@
             // * time - the time of the event
             // Use the Arcade Date() function to format time field into a human-readable format
 
+            // const template = {
+            //   title: "Point Info",
+            //   content: "GPR Scan in {place} on {time}",
+            //   fieldInfos: [
+            //     {
+            //       fieldName: "time",
+            //       format: {
+            //         dateFormat: "short-date-short-time"
+            //       }
+            //     }
+            //   ]
+            // };
+
             const template = {
-              title: "Point Info",
-              content: "GPR Scan in {place} on {time}",
-              fieldInfos: [
-                {
-                  fieldName: "time",
-                  format: {
-                    dateFormat: "short-date-short-time"
-                  }
+                    title: "Point Info",
+                    content: [
+                        {
+                            type: "media",
+                            mediaInfos: [{
+                                title: "<b>GPR SCAN</b>",
+                                type: "image", // Autocasts as new ImageMediaInfo object
+                                caption: "ID: {id}",
+                                // Autocasts as new ImageMediaInfoValue object
+                                value: {
+                                    sourceURL: "{gprImageUrl}"
+                                }
+                            }]
+                        },
+                        {   type: "text",
+                            text: "GPR Scan in {place} \n on {time}"
+
+
+                        }]
+                    ,
+                    fieldInfos: [
+                        {
+                            fieldName: "time",
+                            format: {
+                                dateFormat: "short-date-short-time"
+                            }
+                        }
+                    ]
                 }
-              ]
-            };
+            ;
 
 
             const renderer = {

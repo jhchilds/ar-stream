@@ -16,7 +16,9 @@
         "place": "Votey Parking Lot, UVM",
         "time": 1585848530780,
         "updated": 1585929417150,
-        "updated": 1585929417150
+        "updated": 1585929417150,
+        "id": 1,
+        "gprImageUrl": "http://0.0.0.0:8888/static/images/gpr-figure-lab.png"
       },
       "geometry": {
         "type": "Point",
